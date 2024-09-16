@@ -1,0 +1,53 @@
+-------------------------------------------------------
+Stack
+    --> LIFO
+    --> linear data structure. 
+    --> Items -> inserted and deleted from one end only.
+    --> infix to postfix conversion
+    --> used in function calls
+
+Stack ADT
+    --> a pointer to the topmost element (top by default -1)
+    --> pop()   : rm topmost element from stack
+    --> push()  : push element into stack
+    --> peek(i) : value at given index
+    --> isEmpty()
+    --> isFull()
+
+Stack using Array:
+    --> top = -1 if stack is Empty
+    --> fixed size array creation
+    s.arr = (int*)malloc(s.size* sizeof(int))
+
+-------------------------------------------------------
+DYNAMIC MEMORY ALLOCATION:
+    --> way in which size of data structure can be changed during runtime
+    --> program memory : code -> Static/Global var -> Stack -> Heap
+    --> (In DMA memory is allocated from heap segment in runtime)
+
+    --> FUNCTIONS: 
+    --> are in <stdlib.h>
+        --> malloc : memory allocation
+                    --> reserves block of memory with given amount of bytes
+                    --> return value is a void ptr to allocate space
+                    --> thus ptr needs to be cated to required appropriate type
+                    --> if heap space unsufficient -> null ptr
+                    --> all values at allocated memory are init to garbage values
+                    --> prt = (prt-type) malloc(size_in_bytes);
+
+        --> calloc : contiguos allocation
+                    --> reserves n blocks of memory with given amt of bytes
+                    --> all values at allocated memory are init to 0
+                    --> prt = (prt-type*) calloc(n, size_in_bytes);
+                    
+        --> realloc : reallocation
+                    --> can change size of memory allocated in case of insufficient memory allocation
+                    --> prt = (prt-type*) realloc(ptr, new_size_in_bytes);
+
+        --> free : 
+                    --> free allocated memory being used by the program
+                        in the heap when not required anymore.
+                    --> free(ptr);
+
+
+-------------------------------------------------------
