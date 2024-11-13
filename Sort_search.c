@@ -135,6 +135,7 @@ void quickSort(int arr[], int lb, int ub){
     }
 }
 
+// time complexity: O(n)
 int hashSearch(int arr[], int n, int val){
     int hashTable[100] = {0};
     for(int i = 0; i < n; i++){
@@ -146,6 +147,7 @@ int hashSearch(int arr[], int n, int val){
     return 0;
 }
 
+// time complexity: O(n)
 int linearSearch(int arr[], int n, int val)
 {
     for (int i = 0; i < n; i++)
@@ -158,6 +160,7 @@ int linearSearch(int arr[], int n, int val)
     return -1;
 }
 
+// time complexity: O(logn)
 int binarySearch(int arr[], int n, int val)
 {
     int lb = 0, ub = n-1, mid;
